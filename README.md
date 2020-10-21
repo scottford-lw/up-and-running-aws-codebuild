@@ -35,7 +35,9 @@ Make sure you are signed into your GitHub account then **Fork** this repository 
 <img src="https://techally-artifacts.s3-us-west-2.amazonaws.com/up-and-running/github_oauth.gif">
 
 5. For the **Environment** section use the default selection of **Managed Image** and choose "Amazon Linux 2" for the operating system. For **Runtime(s)** choose "Standard", and for **Image** choose "aws/codebuild/amazonlinux2-x86_64-standard:3.0". The **Role Name** should default to "codebuild-AMI_Builder-service-role". Expand the **Additional configuration** section and scroll down to **Environment variables** and add a "Plaintext" variable of "AWS_REGION" with a value of "us-east-1"
+
 <img src="https://techally-artifacts.s3-us-west-2.amazonaws.com/up-and-running/environment.gif">
+
 6. For the remaining sections leave everything default for now and then click **Create Build Project**
 
 ## Update IAM Role policy for Packer
