@@ -30,10 +30,10 @@ Make sure you are signed into your GitHub account then **Fork** this repository 
 3. For the **Project Name** use "AMI_Builder"
 4. For the **Source** section, choose "GitHub" as the source. Connect to GitHub using **OAuth** then authorize CodeBuild to access your personal GitHub org (You can revoke this at any time).  For the **Repository URL** paste link to the example you forked in the previous step. ( _i.e. `https://github.com/<YOUR_GH_USER>/up-and-running-aws-codebuild`_)
 
-<img src="img/github_oauth.gif">
+<img src="https://techally-artifacts.s3-us-west-2.amazonaws.com/up-and-running/github_oauth.gif">
 
 5. For the **Environment** section use the default selection of **Managed Image** and choose "Amazon Linux 2" for the operating system. For **Runtime(s)** choose "Standard", and for **Image** choose "aws/codebuild/amazonlinux2-x86_64-standard:3.0". The **Role Name** should default to "codebuild-AMI_Builder-service-role". Expand the **Additional configuration** section and scroll down to **Environment variables** and add a "Plaintext" variable of "AWS_REGION" with a value of "us-east-1"
-<img src="img/environment.gif">
+<img src="https://techally-artifacts.s3-us-west-2.amazonaws.com/up-and-running/environment.gif">
 6. For the remaining sections leave everything default for now and then click **Create Build Project**
 
 ## Update IAM Role policy for Packer
@@ -98,7 +98,7 @@ In this section we are going to kick off the first build of a base image with Co
 3. Click **Start Build**
 4. You can leave everything default and click on **Start Build** again
 5. Click **Tail Logs** to watch the build (Build may take between 5-10min)
-<img src="img/tail_logs.png">
+<img src="https://techally-artifacts.s3-us-west-2.amazonaws.com/up-and-running/tail_logs.png">
   
   Once the build completes you will see a message `HashiCorp Packer build completed on <DATE>`
 
@@ -114,7 +114,7 @@ Now we are going to use the Lacework CLI to generate a package manifest (a list 
 ### Create API Keys
 In order to authenticate with Lacework's APIs for a vulnerability scan you will need to create an API Key and Secret.
 
-<img src="img/api_key.gif">
+<img src="https://techally-artifacts.s3-us-west-2.amazonaws.com/up-and-running/api_key.gif">
 
 1. Login to the Lacework console and click on **Settings** followed by **API Keys** followed by **CREATE NEW API KEY**
 2. Give the API key a name the click **Save**
@@ -143,7 +143,7 @@ LW_API_SECRET (SecureString): "Your Lacework API secret"
 7. For the **Name** use "LW_API_SECRET", for the **Type** use "SecureString" and for the **Value** use the API_KEY_SECRET from the `JSON` you downloaded in the previous step
 8. Click **Create Parameter** to store the parameter
 
-<img src="img/params.png
+<img src="https://techally-artifacts.s3-us-west-2.amazonaws.com/up-and-running/params.png
 ">
 
 ### Update IAM Policy for SSM Access
@@ -343,7 +343,7 @@ We are now ready to add vulnerability scanning to our build with Lacework
 3. Click **Start Build**
 4. You can leave everything default and click on **Start Build** again
 5. Click **Tail Logs** to watch the build (Build may take between 5-10min)
-<img src="img/tail_logs.png">
+<img src="https://techally-artifacts.s3-us-west-2.amazonaws.com/up-and-running/tail_logs.png">
 
 6. This time around you should see the results of the scan...
 
