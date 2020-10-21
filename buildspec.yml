@@ -1,5 +1,11 @@
 ---
 version: 0.2
+env:
+  parameter-store:
+    LW_ACCOUNT: "LW_ACCOUNT"
+    LW_API_KEY: "LW_API_KEY"
+    LW_API_SECRET: "LW_API_SECRET"
+
 phases:
   pre_build:
     commands:
