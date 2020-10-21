@@ -143,8 +143,7 @@ LW_API_SECRET (SecureString): "Your Lacework API secret"
 7. For the **Name** use "LW_API_SECRET", for the **Type** use "SecureString" and for the **Value** use the API_KEY_SECRET from the `JSON` you downloaded in the previous step
 8. Click **Create Parameter** to store the parameter
 
-<img src="https://techally-artifacts.s3-us-west-2.amazonaws.com/up-and-running/params.png
-">
+<img src="https://techally-artifacts.s3-us-west-2.amazonaws.com/up-and-running/params.png">
 
 ### Update IAM Policy for SSM Access
 In order for CodeBuild to pull parameters from the Parameter store we need to update the IAM Policy to provide access. 
