@@ -15,6 +15,8 @@ Before you begin you will need the following:
 - An AWS Account with permissions to launch services
 - Lacework Account (If you want to add vulnerability scanning)
 
+If you are interested in trying out Lacework click [here](https://lacework.zoom.us/webinar/register/2816011682181/WN_RPlaxEiXRoWyRiBjFop6tQ)
+
 ## Walkthrough
 The following steps will walk you through setting up AWS CodeBuild to build an AMI in `us-east-1`
 
